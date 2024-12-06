@@ -1,0 +1,219 @@
+[data-theme="light"] {
+    --clr-background: #F5F5F5;
+    --clr-font: #111111;
+    --clr-card: #fcfcfc;
+    --clr-switch-track: #AABBCC;
+    --clr-link: #3333FF;
+    --clr-switch-track:#AABBCC;
+    --clr-switch-track: #AABBCC;
+    --ff: "Cairo", sans-serif;
+    --ts-caption: 600 1.8rem/1 var(--ff);
+    --ts-normal-text: 400 1.6rem/1.4 var(--ff);
+    --transition: all 0.2s linear;
+    --transition: all 0.2s linear;
+    --shadow-card: 5px 5px 30px 0 rgba(51, 51, 51, 20%);
+    --clr-background:#ffffff;
+}
+
+[data-theme="dark"] {
+    --clr-background: #111111;
+    --clr-font: #F5F5F5;
+    --clr-card: #1A1A1A;
+    --clr-link: #C2C2FF;
+    --ff: "Cairo", sans-serif;
+    --ts-caption: 600 1.8rem/1 var(--ff);
+    --ts-normal-text: 400 1.6rem/1.4 var(--ff);
+    --transition: all 0.2s linear;
+}
+
+
+html {
+    font-size: 62.5%;
+    font-family: var(--ff);
+    color: var(--clr-font);
+    transition: var(--transition);
+}
+
+body {
+    background-color: var(--clr-background);
+    color: var(--clr-font);
+    transition: var(--transition);
+}
+
+.navbar h1 {
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 2.4rem; 
+}
+
+.navbar {
+    background-color: var(--clr-card);
+    transition: var(--transition);
+    min-height: 8.5rem;
+    padding: 1.6rem;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.switch {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.switch_track {
+    background-color: var(--clr-switch-track);
+    display: block;
+    height: 2rem;
+    width: 4rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin: 0 .2rem;
+    position: relative;
+    transition: var(--transition);
+}
+
+.switch_track::before {
+    content: "";
+    background-color: var(--clr-font);
+    transition: var(--transition);
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 1rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+[data-theme="dark"] .switch_track::before {
+    left: 2rem;
+}
+
+.container {
+    margin-top: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+form input, form select, form button {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.6rem;
+}
+
+form input, form select {
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #f083a7;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #d17191;
+}
+
+#lista-funcionarios {
+    margin-top: 20px;
+}
+
+#funcionarios {
+    list-style-type: none;
+    padding: 0;
+}
+
+#funcionarios li {
+    background-color: var(--clr-card);
+    padding: 15px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#funcionarios li button {
+    margin-left: 10px;
+    background-color: #ff6347;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    transition: background-color 0.3s;
+}
+
+#funcionarios li button:hover {
+    background-color: #d17191;
+}
+
+
+button {
+    background-color: #ff6347;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d17191;
+}
+
+
+#perfil-container {
+    display: none;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#perfil-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.employee-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.employee-container {
+    display: flex;
+    align-items: center;
+}
+
+.employee-image img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.employee-text {
+    font-size: 16px;
+    margin-right: 10px;
+}
